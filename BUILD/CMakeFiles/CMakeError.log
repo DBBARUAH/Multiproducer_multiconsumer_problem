@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/grads/b/baruah.dharmendra/Desktop/CSCE611/MultiProducer-MultiConsumer-using-MessageQueue/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3501353828/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3501353828.dir/build.make CMakeFiles/cmTryCompileExec3501353828.dir/build
+gmake[1]: Entering directory `/home/grads/b/baruah.dharmendra/Desktop/CSCE611/MultiProducer-MultiConsumer-using-MessageQueue/BUILD/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/grads/b/baruah.dharmendra/Desktop/CSCE611/MultiProducer-MultiConsumer-using-MessageQueue/BUILD/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3501353828.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -Wall -std=gnu99    -o CMakeFiles/cmTryCompileExec3501353828.dir/CheckSymbolExists.c.o   -c /home/grads/b/baruah.dharmendra/Desktop/CSCE611/MultiProducer-MultiConsumer-using-MessageQueue/BUILD/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3501353828
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3501353828.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -std=gnu99     CMakeFiles/cmTryCompileExec3501353828.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3501353828 -rdynamic 
+CMakeFiles/cmTryCompileExec3501353828.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec3501353828] Error 1
+gmake[1]: Leaving directory `/home/grads/b/baruah.dharmendra/Desktop/CSCE611/MultiProducer-MultiConsumer-using-MessageQueue/BUILD/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3501353828/fast] Error 2
+
+File /home/grads/b/baruah.dharmendra/Desktop/CSCE611/MultiProducer-MultiConsumer-using-MessageQueue/BUILD/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/grads/b/baruah.dharmendra/Desktop/CSCE611/MultiProducer-MultiConsumer-using-MessageQueue/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3712234395/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3712234395.dir/build.make CMakeFiles/cmTryCompileExec3712234395.dir/build
+gmake[1]: Entering directory `/home/grads/b/baruah.dharmendra/Desktop/CSCE611/MultiProducer-MultiConsumer-using-MessageQueue/BUILD/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/grads/b/baruah.dharmendra/Desktop/CSCE611/MultiProducer-MultiConsumer-using-MessageQueue/BUILD/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3712234395.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -Wall -std=gnu99 -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3712234395.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3712234395
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3712234395.dir/link.txt --verbose=1
+/usr/bin/cc   -Wall -std=gnu99 -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3712234395.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3712234395 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTryCompileExec3712234395] Error 1
+gmake[1]: Leaving directory `/home/grads/b/baruah.dharmendra/Desktop/CSCE611/MultiProducer-MultiConsumer-using-MessageQueue/BUILD/CMakeFiles/CMakeTmp'
+gmake: *** [cmTryCompileExec3712234395/fast] Error 2
+
+

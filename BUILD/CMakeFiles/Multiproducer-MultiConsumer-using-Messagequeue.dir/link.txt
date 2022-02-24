@@ -1,0 +1,1 @@
+/usr/bin/cc   -Wall -std=gnu99    CMakeFiles/Multiproducer-MultiConsumer-using-Messagequeue.dir/main.c.o  -o Multiproducer-MultiConsumer-using-Messagequeue -rdynamic -lpthread -lrt 
